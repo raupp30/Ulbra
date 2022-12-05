@@ -16,24 +16,24 @@
 </head>
 
 <body>
-    <header class="p-4 text-center">
+    <header class="p-4 text-center bg-black text-white">
         <h1>Área administrativa</h1>
-        <a href="<?=base_url('admin/logout')?>">Sair</a>
+        <a href="<?=base_url('admin/logout')?>" class="text-white" > Sair</a>
     </header>
 
     <div class="container-fluid">
         <div class="row">
-            <nav class="col-md-3 p-3">
-                <h2>Menu</h2>
+            <nav class="col-md-3 p-3 bg-white">
+                <h2 class="text-black" >Menu</h2>
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a id="home" class="nav-link text-white" href="<?=base_url('admin')?>">Home</a>
+                        <a id="home" class="nav-link text-black" href="<?=base_url('admin')?>">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a id="home" class="nav-link text-white" href="<?=base_url('admin/listClients')?>">Listar Clientes</a>
+                        <a id="home" class="nav-link text-black" href="<?=base_url('admin/listClients')?>">Listar Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a id="home" class="nav-link text-white" href="<?=base_url('admin/insertClient')?>">Cadastrar Cliente</a>
+                        <a id="home" class="nav-link text-black" href="<?=base_url('admin/insertClient')?>">Cadastrar Cliente</a>
                     </li>
                 </ul>
             </nav>

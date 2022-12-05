@@ -17,5 +17,5 @@
         <input name="address" class="form-control" type="text" value="<?=$arrayClient['address']?>">
     </div>
     
-    <input class="btn btn-primary" type="submit" value="Enviar">
+    <input class="btn btn-success" type="submit" value="Enviar">
 </form>

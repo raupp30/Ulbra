@@ -17,6 +17,23 @@ class Client extends BaseController{
         echo view('templates/header');
         echo view('client/listClients', $data);
         echo view('templates/footer');
+
+        
     }
+
+    public function insertClient(){
+    
+        $ClientModel = new ClientModel();
+       
+        $data =[
+            'arrayClients' => $ClientModel -> findAll()
+        ];
+
+        echo view('templates/header');
+        echo view('client/insertClient', $data);
+        echo view('templates/footer');
+    }
+
+    
 
 }

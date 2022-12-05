@@ -36,11 +36,22 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Site::index');
+
+//api
+
+$routes->get('clients', 'Clients::list');
+
 $routes->get('/home', 'Site::view/home');
 $routes->get('/about', 'Site::view/about');
 $routes->get('/contact', 'Site::view/contact');
 
 $routes->get('/listClients', 'Client::listClients');
+$routes->get('/insertClient', 'Client::insertClient');
+
+$routes->get('/manutencao', 'Site::view/manutencao');
+$routes->get('/insertDisp', 'Site::view/insertDisp');
+
+
 
 //admin routes
 

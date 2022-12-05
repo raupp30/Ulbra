@@ -16,8 +16,8 @@
 <div class="container-fluid" >
 	<div class="row">
 		<div class="col-md-4"></div>
-		<div class="col-md-4 p-5 bg-black">		
-			<h1 class="login-box">Login no sistema</h1>
+		<div class="col-md-4 p-5">		
+			<h1 class="login-box text-success text-center">Admin Page</h1>
 			<form action="<?=base_url('admin/validateLogin')?>" method=POST name="formulario" id="formulario">
 				<div class="form-group">
 					<label >Login</label>
@@ -28,13 +28,13 @@
 					<input type="password" class="form-control" name="password" placeholder="Digite sua senha">
 				</div>	
 				<br>
-				<input class="btn btn-primary" type="submit" name="Enviar" value="Fazer Login">
+				<input class="btn btn-success" type="submit" name="Enviar" value="Fazer Login">
 			</form>
 		</div>	
 		<div class="col-md-4"></div>
 		<br>
 		<br>	
-		<a class="text-center" href="../index.php">Site Principal</a>
+		<a class="text-center text-danger" href="../index.php">Site Principal</a>
 	</div> 
 </div>
  

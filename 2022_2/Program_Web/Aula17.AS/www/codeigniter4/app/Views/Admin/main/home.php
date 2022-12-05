@@ -1,6 +1,6 @@
-<h2>Home</h2>
+<h2 class="text-black" >Home</h2>
 
-<p>
+<p class="text-black" >
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium.
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium.
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium.

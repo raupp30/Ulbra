@@ -1,15 +1,15 @@
 <h1>Listagem de Clientes</h1>
 
 
-<form class="form-inline my-2 my-lg-0" action="<?=base_url('admin/searchClient')?>" method="search">
-      <input name="search" class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+<form action="<?=base_url('admin/searchClient')?>" method="search">
+      <input name="search" class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar" >
       <br>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Pesquisar</button>
+      <button class="btn btn-success my-2 my-sm-0 bg-sucess" type="submit" >Pesquisar</button>
     </form>
 
 <table class="table">
   <tr>
-    <th>ID do Cliente</th>
+    <th>ID</th>
     <th>Nome</th>
     <th>Email</th>
     <th>Telefone</th>

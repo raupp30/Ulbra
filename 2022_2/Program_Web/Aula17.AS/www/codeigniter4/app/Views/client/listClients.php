@@ -1,6 +1,6 @@
 <h1>Listagem de Clientes</h1>
 
-<table class="table">
+<table class="table text-white">
   <tr>
     <th>ID do Cliente</th>
     <th>Nome</th>

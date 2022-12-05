@@ -16,34 +16,44 @@
 </head>
 
 <body>
-    <header class="p-5 bg-primary text-white text-center">
-        <h1>Minha Página de programação Web</h1>
+    <header class="p-5 bg-danger text-white text-center">
+        <h1 >Avaliação Semestral PW</h1>
     </header>
 
     <div class="container-fluid">
         <div class="row">
-            <nav class="col-md-3 p-3">
-                <h2>Menu</h2>
+            <nav class="bg-white col-md-3 p-3">
+                <h2 class="text-black" >Menu</h2>
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a id="home" class="nav-link" href="<?=base_url('home')?>">Home</a>
+                        <a id="home" class="nav-link text-black" href="<?=base_url('home')?>">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a id="sobre" class="nav-link" href="<?=base_url('about')?>">Sobre</a>
+                        <a id="sobre" class="nav-link text-black" href="<?=base_url('about')?>">Sobre</a>
                     </li>
                     <li class="nav-item">
-                        <a id="contato" class="nav-link" href="<?=base_url('contact')?>">Contato</a>
+                        <a id="contato" class="nav-link text-black" href="<?=base_url('contact')?>">Contato</a>
                     </li>
                 </ul>
-                <h2>Clientes</h2>
+                <h2 class="text-black">Clientes</h2>
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a id="home" class="nav-link" href="<?=base_url('insertClient')?>">Cadastro</a>
+                        <a id="home" class="nav-link text-black" href="<?=base_url('insertClient')?>">Cadastro</a>
                     </li>
                     <li class="nav-item">
-                        <a id="home" class="nav-link" href="<?=base_url('listClients')?>">Listagem de clientes</a>
+                        <a id="home" class="nav-link text-black" href="<?=base_url('listClients')?>">Listagem de clientes</a>
+                    </li>
+                </ul>
+
+                <h2 class="text-black">Nossos serviços</h2>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="<?=base_url('manutencao')?>">Manutenção</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="<?=base_url('insertDisp')?>">Inserção de dispositivos</a>
                     </li>
                 </ul>
             </nav>
             
-            <section class="col-md-9 p-3">
+            <section class="col-md-9 p-3 bg-black text-white">
