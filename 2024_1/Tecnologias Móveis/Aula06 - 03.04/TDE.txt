@@ -1,0 +1,40 @@
+Fazer uma pesquisa sobre os principais layouts utilizando mecanismos de VIEW no android.
+
+LinearLayout:
+
+É um layout que organiza seus filhos em uma única direção, horizontal ou vertical.
+É útil para exibir componentes UI de maneira linear.
+Pode ser configurado para distribuir o espaço disponível entre seus filhos de maneira uniforme ou ponderada.
+RelativeLayout:
+
+Permite posicionar seus filhos relativamente ou em relação a outros elementos do layout.
+É útil quando os elementos da interface precisam estar posicionados relativamente uns aos outros.
+ConstraintLayout:
+
+Oferece um conjunto flexível de ferramentas para criar layouts complexos sem aninhamento desnecessário de visualizações.
+Permite definir restrições entre visualizações para criar layouts responsivos.
+É altamente recomendado para o desenvolvimento de UIs complexas e responsivas.
+FrameLayout:
+
+É um layout simples que exibe seus filhos em uma pilha.
+É útil quando se deseja sobrepor visualizações ou exibir uma única visualização em um determinado momento.
+GridLayout:
+
+Organiza seus filhos em uma grade bidimensional.
+É útil para criar layouts com células regulares, como tabelas.
+TableLayout:
+
+Organiza os filhos em filas e colunas, semelhante a uma tabela HTML.
+Cada filho pode ocupar uma célula na tabela.
+ScrollView:
+
+Permite rolar seu conteúdo quando o espaço disponível não é suficiente para exibir todo o conteúdo na tela.
+É útil quando se precisa exibir uma quantidade significativa de conteúdo em uma única tela.
+CoordinatorLayout:
+
+É um layout avançado que coordena as interações entre as visualizações filhas.
+É útil para criar efeitos de comportamento complexos, como recuo da barra de ferramentas, deslizamento de elementos, etc.
+AppBarLayout:
+
+Fornecer funcionalidades específicas de AppBar, como recuo, deslizamento, etc.
+É frequentemente usado junto com o CoordinatorLayout e o CollapsingToolbarLayout para criar barras de aplicativos com efeitos de deslizamento.

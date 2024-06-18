@@ -1,0 +1,18 @@
+Faça uma pesquisa sobre o desenvolvimento de sistemas móveis nativo e híbrido/cross-platform, busque as 
+principaisdiferenças, suas vantagens, desvantagens e também quais tecnologias podemos utilizar.
+
+Desenvolvimento de sistemas mobile hibrido:
+
+Um app hibrido é aquele que é desenvolvido com linguagens de programação web como HTML, CSS, JS ou frameworks específicos como flutter que roda dentro de um navegador ou de um contêiner nativo.
+O app hibrido pode reduzir o tempo e o custo de desenvolvimento, pois aproveita o conhecimento e as ferramentas já existentes na web ou nos frameworks.
+No entanto, um aplicativo híbrido também tem algumas desvantagens.
+Ele pode ter uma menor qualidade gráfica, um menor desempenho e uma menor integração com o dispositivo do que um aplicativo nativo.
+
+Desenvolvimento de sistemas mobile nativo:
+
+Um app nativo é aquele que é desenvolvido especificamente para plataforma ou SO, como Android ou IOS.
+Um aplicativo nativo pode oferecer uma melhor experiência de usuário, um maior desempenho e uma maior integração com o dispositivo.
+No entanto, um aplicativo nativo também tem algumas desvantagens. Ele requer mais tempo e custo de desenvolvimento, pois é preciso criar um código diferente para cada plataforma
+
+
+

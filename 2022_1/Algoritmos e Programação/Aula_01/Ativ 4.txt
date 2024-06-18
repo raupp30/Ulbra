@@ -1,0 +1,17 @@
+Ativ 4
+
+#include <stdio.h>
+
+int main(){
+	float nota1, nota2, media;
+	printf("Digite nota1");
+	scanf ("%f", &nota1);
+	
+	printf("Digite nota2");
+	scanf ("%f", &nota2);
+	a
+	media = (nota1*2)+(nota2*3)/3+2;
+	printf("A media das notas é:%.2f\n",media);
+	return 0;
+}
+

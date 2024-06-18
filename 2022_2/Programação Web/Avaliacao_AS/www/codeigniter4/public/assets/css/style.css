@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+header{
+    background-color: grey;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+}
+
+nav{
+    background-color: antiquewhite;
+    color: black;
+    padding: 50px;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+nav a:link, nav a:visited, nav a:hover, nav a:active{
+    text-decoration: none;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+}
+
+section{
+    color: #2a3f54;
+    background-color: blue;
+    font-family: 'Raleway', sans-serif;
+}
+
+footer{
+    background-color: rgb(205, 217, 240);
+    color: aliceblue;;
+    font-family: 'Raleway', sans-serif;
+}
+
+a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+    color: black;
+}
+

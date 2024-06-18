@@ -1,0 +1,23 @@
+Ativ 7
+
+#include <stdio.h>
+
+#include <stdlib.h>
+
+int main() {
+
+float peso;
+
+printf("\nInforme o peso: ");
+
+scanf("%f", &peso);
+
+printf("\nNovo peso se engordar 15%%: %f", peso*1.15);
+
+printf("\nNovo peso se engordar 20%%: %f", peso*1.2);
+
+
+
+return 0;
+
+}

@@ -1,0 +1,37 @@
+header{
+    background-color: white;
+    font-family: cursive;
+    
+}
+h1{
+    font-size: 14px;
+}
+.img-thumbnail{
+    max-width: 300px;
+}
+article{
+    background-color: mediumseagreen;
+    color: white;
+}
+footer{
+   background-color: black;
+   font-size: 4px;
+}
+.howtofindme{
+    background-color: darkslategray
+}
+.trab{
+    background-color: saddlebrown;
+}
+.pedalar{
+    max-width: 230px;
+}
+.est{
+    max-width: 230px;
+}
+.trab{
+    max-width: 230px;
+}
+footer{
+    color: white;
+}

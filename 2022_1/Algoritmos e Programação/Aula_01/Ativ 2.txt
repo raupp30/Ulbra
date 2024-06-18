@@ -1,0 +1,24 @@
+Ativ 2
+
+#include <stdio.h>
+
+int main(){
+	float n1, n2, n3, resultado;
+	
+	printf("Digite o primeiro numero");
+	scanf("%f", &n1);
+	
+	printf("Digite o segundo numero");
+	scanf("%f", &n2);
+	
+	printf("Digite o terceiro numero");
+	scanf("%f", &n3);
+	
+	resultado = n1*n2*n3;
+	
+	printf("A multiplicacao do n1+n2+n3 é:%.2f\n", resultado);
+	
+	return 0;
+}
+
+

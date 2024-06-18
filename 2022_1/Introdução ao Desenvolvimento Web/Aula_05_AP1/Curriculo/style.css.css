@@ -1,0 +1,93 @@
+#folha{
+    width: 60%;
+  padding:20px 20px 20px 20px;
+    border:2px solid rgb(255, 0, 0);
+    margin:auto;
+  
+    }
+    #profilepic{
+        width: 150px;
+        height: 150px;
+        float: left;
+        border-radius: 150px;
+        border:2px solid black;
+        box-shadow:3px 3px 15px black;
+        margin-top: 20px;
+        margin-left: 20px;
+        filter:grayscale(100%);   
+    }
+   #nome{
+       font-family: cursive;
+       text-align:center;
+       background-color: rgb(255, 0, 0);
+   }
+   .foto{
+       float:left; 
+       width: 30%;
+       margin-top: 1px;
+       margin-bottom: 20px;
+   }
+
+   p{
+       font-size: 15px;
+   }
+
+   .dados{
+      float: left;
+      width: 70%;
+      padding-top: 50px;
+      font-family: cursive;   
+   }
+
+   .linha{
+       text-align: left;
+       font-family: cursive;
+       clear: both;    
+       
+   }
+   .obj{
+       font-size: 12px;
+       text-align: left;
+       
+      
+    
+
+   }
+   .frm{
+  font-family: cursive;
+  font-size: 12px;
+    margin-top: 1px;
+    text-align: left;
+    }
+    
+    #coluna1{
+        float:left;
+        width: 48%;
+        font-size: 15px;
+        
+    }
+    #coluna2{
+        float:left;
+        background-color:rgb(255, 0, 0);
+        width: 2px;
+        height: 500px;
+        
+    }
+    #coluna3{
+        float:left;
+        width: 48%;
+        padding-left: 10px;
+        font-size: 15px;
+    }
+    .circle{
+        height: 10px;
+        width: 10px;
+        background-color: red;
+        border-radius: 50%;
+        float: right;
+        margin-left: 10px;
+    }
+    hr{
+        margin-top: 0px;
+        border-color: red;
+    }

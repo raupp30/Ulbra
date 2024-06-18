@@ -1,0 +1,20 @@
+Ativ 1
+
+#include <stdio.h>
+
+int main(){
+	float n1, n2, resultado;
+	
+	printf("Digite o primeiro numero");
+	scanf("%f", &n1);
+	
+	printf("Digite o segundo numero");
+	scanf("%f", &n2);
+	
+	resultado = n1-n2;
+	
+	printf("A subtracao n1-n2 é:%.2f\n", resultado);
+	
+	return 0;`
+}
+

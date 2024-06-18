@@ -1,0 +1,19 @@
+Ativ 5
+
+#include <stdio.h>
+
+int main(){
+	int produto, novoPr, desconto; 
+	
+	printf("Digite o valor do produto");
+    scanf("%d%*c", &produto);
+    
+
+    novoPr = (produto *0.9);
+    printf("O novo preço do produto e: %.d\n",novoPr);
+	return 0;
+	
+}
+
+
+

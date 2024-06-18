@@ -1,0 +1,20 @@
+Ativ 6
+
+#include <stdio.h>
+
+int main(){
+	int salario, vendas, salPosCom, comissao;
+	
+	printf("Digite o salario");
+    scanf("%d%*c", &salario);
+    
+    printf("Digite o total de vendas");
+    scanf("%d%*c", &vendas);
+
+comissao = (vendas *4/100);
+salPosCom = (salario + comissao);
+printf("O salario com a comissao e: %.d\n",salPosCom);
+	return 0;
+	
+	
+}

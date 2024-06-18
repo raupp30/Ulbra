@@ -1,0 +1,135 @@
+*{
+    margin: 0 auto;
+}
+body{
+    background-color: #e2e2e2;
+}
+
+.divtudo{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.divlinha{
+    clear: both;
+}
+#divcabecalho{
+    background-color: #162e58;
+    min-height: 100px;
+    padding: 20px 50px 20px 50px;
+}
+#h1TituloCabecalho{
+    color: #fff;
+    font-size: 16px;
+    float: left;
+} 
+#divClassificacao{
+    width: 60%;
+    background-color: #fff;
+    
+}
+#tableClassificacao{
+    width: 100%;
+    text-align: center;
+
+}
+.h2Classificacao{
+    text-align: center;
+}
+.h2Gols{
+    text-align: center;
+}
+.h2TabeladeJogos{
+    text-align: center;
+}
+table, td, th{
+    border-bottom: solid 1px #e2e2e2;
+    border-collapse: collapse;
+    padding: 7px;
+}
+#divGoleadores{
+width: 60%;
+background-color: #fff;
+}
+#tableGoleadores{
+width: 100%;
+}
+#divjogos{
+    width: 60%;
+    background-color: #fff;
+}
+#tableJogos{
+    width: 100%;
+    text-align: center;
+}
+th{
+    color: darkgray;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+}
+.thNomeClube{
+    width: 50%;
+
+}
+.tdNomeClube{
+    text-align: left;
+    width: 60%;
+}
+.imgClube{
+    width: 20px;
+}
+.divEmp{
+    background-image: url('../img/e.svg');
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+    float: right;
+    margin-right: 5px;
+}
+.divVit{
+    background-image: url('../img/v.svg');
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+    float: right;
+    margin-right: 5px;
+}
+.divDer{
+    background-image: url('../img/d.svg');
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+    float: right;
+    margin-right: 5px;
+}
+.tdUltimasCinco{
+    text-align: center;
+    width: 20%;
+    padding-right: 20px;
+}
+.tableJogo{
+    width: 80%;
+
+}
+.thTableJogo{
+    text-align: left;
+
+
+}
+.tdHorario{
+    font-size: 10px;
+    border-bottom: 0px;
+}
+.tdClube{
+    text-align: left;
+    width: 80%;
+    border-bottom: 0px;
+
+}
+.thProximosJogos .trTableJogos{
+    border-bottom: 0px;
+}
+.imgJogador{
+    width: 20px;
+    
+}

@@ -1,0 +1,51 @@
+header{
+    color: coral;
+    font-family: sans-serif;
+    
+}
+#inicio{
+    font-size: 70px;
+}
+.covid{
+    max-width: 85%;
+}
+.eqp{
+    color: coral;
+    font-size: 14px;
+}
+.leonardo{
+    height: 100px;
+    border-radius: 50%;
+}
+.p5{
+    color: gold;
+}
+.p4{
+    color: coral;
+    max-width: 85%
+}
+.p6{
+    color: coral;
+}
+.h5{
+    color: black;
+}
+.choco{
+    max-width: 130%;
+}
+footer{
+    background-color: coral;
+    color: white;
+    
+}
+.ftr{
+    font-size: 10px;
+    margin-bottom: 0px !important;
+}
+h2{
+color: gray;
+font-size: 14px;
+}
+h3{
+font-size: 22px;
+}

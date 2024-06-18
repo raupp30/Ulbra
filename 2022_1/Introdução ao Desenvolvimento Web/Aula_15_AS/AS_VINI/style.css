@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital@1&display=swap');
+body{
+    background-color: silver;
+    font-family:monospace;
+    
+}
+#menuSelecoes, #menuContato, #menuInt,#menuBR{
+    color:black;
+    font-family:monospace;
+}
+.navbar{
+    background-color: silver;
+    justify-content:center
+    
+}
+
+.navs{
+    background-color: silver;
+    padding: 10px;
+}
+.realP{
+    width: 26rem;
+    
+}
+
+.RS{
+    width: 12rem;
+    
+}
+article{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.uefa{
+    font-family: 'Cabin', sans-serif;
+    color: aliceblue;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.trinta{
+    width: 14rem;
+    margin: auto;
+    
+}
+aside{
+    background-color: aquamarine;
+    margin-top: 15px;
+}
+footer{
+    background-color: silver;
+    color: black;
+    
+}
+.pix{
+    width: 18rem;
+    font-family: cursive;
+    text-align: right;
+    margin-left: 40px;
+    text-decoration: dotted;
+}
+
+.produto { margin-bottom: 20px; cursor: pointer; }
+.produto {
+    background-color: black;
+    color:white;
+    padding: 5px 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#produtos {
+    display: flex;
+    
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.grm{
+    width: 12rem;
+}
+.principal{
+    background-color: black;
+}
+.direitos{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.ctt{
+    background-color: white;
+    color: black;
+    font-family: cursive;
+}

@@ -1,0 +1,24 @@
+Ativ 8
+
+#include <stdio.h>
+
+#include <stdlib.h>
+
+int main() {
+
+float area, base1, base2, altura;
+printf("\nDiga o valor da base maior");
+scanf ("%f", &base1);
+
+printf("\nDiga o valor de base menor");
+scanf ("%f", &base2);
+
+printf("\nInforme altura");
+scanf ("%f", &altura);
+
+area = ((base1+base2)*altura)/2;
+printf ("\n valor da area e = %.2f", area);
+return 0;
+
+}
+

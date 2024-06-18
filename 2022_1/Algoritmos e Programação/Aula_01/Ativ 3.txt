@@ -1,0 +1,21 @@
+Ativ 3
+#include <stdio.h>
+
+int main(){
+	float n1, n2, resultado;
+	printf("Digite o valor de n1");
+	scanf ("%f", &n1);
+	
+	printf("Digite o valor de n2");
+	scanf ("%f", &n2);	
+	
+	resultado = (n1/n2);
+	
+	printf("A divisão de n1/n2 é:%.2f\n", resultado);
+	
+	return 0;
+	
+	
+	
+}
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <title>Dashboard</title>
+</head>
+
+<header>
+    <div class="navbar">
+        <ul>
+            <li><a href="{{ url_for('criar_treino') }}">Treino</a></li>
+            <li><a href="{{ url_for('evolucao') }}">Evolução</a></li>
+            <li><a href="{{ url_for('desafios') }}">Desafios</a></li>
+            <li><a href="{{ url_for('profile') }}">Perfil</a></li>
+        </ul>
+    </div>
+</header>
+<body>
+    <div class="container-criar-treino">
+        <h3>Qual grupo muscular você deseja criar treino? </h3>
+        <details>
+            <summary>Peito</summary>
+            <li><a href="{{ url_for('supino_reto') }}">Supino Reto</a></li>
+            <li><a href="{{ url_for('supino_inclinado') }}">Supino Inclinado</a></li>
+            <li><a href="{{ url_for('voador_frontal') }}">Voador Frontal</a></li>
+            <li><a href="{{ url_for('crucifixo_reto') }}">Crucifixo Reto</a></li>
+            <li><a href="{{ url_for('crucifixo_inclinado') }}">Crucifixo Inclinado</a></li>
+        </details>
+        <details>
+            <summary>Costas</summary>
+            <li><a href="{{ url_for('barra_fixa') }}">Barra Fixa</a></li>
+            <li><a href="{{ url_for('pullover_polia') }}">Pullover Polia</a></li>
+            <li><a href="{{ url_for('puxada_frontal') }}">Puxada Frontal</a></li>
+            <li><a href="{{ url_for('remada_baixa') }}">Remada Baixa</a></li>
+            <li><a href="{{ url_for('remada_curvada') }}">Remada Curvada</a></li>
+        </details>
+        <details>
+            <summary>Biceps</summary>
+            <p>Conteúdo 3</p>
+        </details>
+        <details>
+            <summary>Triceps</summary>
+            <p>Conteúdo 4</p>
+        </details>
+        <details>
+            <summary>Antebraço</summary>
+            <p>Conteúdo 5</p>
+        </details>
+        <details>
+            <summary>Pernas</summary>
+            <p>Conteúdo 6</p>
+        </details>
+        <details>
+            <summary>Lombar</summary>
+            <p>Conteúdo 7</p>
+        </details>
+    </div>
+
+</body>
+<footer>
+    <div class="navbar">
+        <ul>
+            <li><a href="{{ url_for('criar_treino') }}">Treino</a></li>
+            <li><a href="{{ url_for('evolucao') }}">Evolução</a></li>
+            <li><a href="{{ url_for('desafios') }}">Desafios</a></li>
+            <li><a href="{{ url_for('profile') }}">Perfil</a></li>
+        </ul>
+        <a href="{{ url_for('logout') }}">Sair</a>
+    </div>
+    <div></div>
+</footer>
+
+</html>

@@ -1,0 +1,45 @@
+header{
+    background-color: aquamarine;
+    color: black;
+    text-align: center;
+    padding: 50px;
+    font-size: 22px;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px auto;
+}
+section{
+    display: flex;
+    flex-wrap: nowrap;
+}
+nav{
+padding: 30px;
+width: 20%;
+}
+nav ul{
+    list-style-type: none;
+}
+article{
+    background: lightgray;
+    padding: 50px;
+    width: 80%;
+}
+footer{
+    background-color: aquamarine;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+@media(max-widht:600px){
+    section{
+        flex-wrap: wrap;
+    }
+    nav{
+        width: 100%;
+    }
+    article{
+        width: 100%;
+    }
+}

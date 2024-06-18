@@ -1,0 +1,21 @@
+Ativ 10
+
+#include <stdio.h>
+
+#include <stdlib.h>
+
+int main() {
+
+float area, lado1, lado2, altura;
+printf("\nDiga o valor do lado1");
+scanf ("%f", &lado1);
+
+printf("\nDiga o valor do lado2");
+scanf ("%f", &lado2);
+
+area = (lado1*lado2);
+printf ("\n valor da area e = %.2f", area);
+return 0;
+
+}
+

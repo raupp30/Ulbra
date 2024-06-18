@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+#include <stdlib.h>
+
+int main() {
+
+float kilos, gramas;
+
+printf("Digite o peso em KG: ");
+
+scanf("%f", &kilos);
+
+gramas = kilos*1000;
+
+printf("A pessoa pesa %.2f gramas.", gramas);
+
+return 0;
+
+}

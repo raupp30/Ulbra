@@ -1,0 +1,41 @@
+header{
+    background-color: gainsboro;
+    font-family:monospace;
+    
+}
+#menuRoad{
+    font-family:monospace;
+color:black;
+}
+#menuMountainbike{
+    color:black;
+    font-family:monospace;
+}
+#menuGravel{
+    color:black;
+    font-family:monospace;
+}
+.navbar{
+    background-color: gainsboro;
+    justify-content:center
+    
+}
+footer{
+    background-color:gainsboro;
+    font-family:monospace;
+}
+#navs{
+    background-color:gainsboro;
+    padding: 10px;
+}
+#freios{
+    font-family: monospace;
+    color: black;
+}
+#sram{
+    max-height: 30px;
+    
+}
+#imgSr{
+    justify-content: center;
+}

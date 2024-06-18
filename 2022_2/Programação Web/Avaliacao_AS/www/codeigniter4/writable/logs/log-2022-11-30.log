@@ -1,0 +1,43 @@
+CRITICAL - 2022-11-30 16:59:37 --> syntax error, unexpected token "}", expecting ";"
+in APPPATH/Controllers/Admin/User.php on line 29.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH/Controllers/Admin/User.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\User')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\User')
+ 4 SYSTEMPATH/CodeIgniter.php(877): class_exists('\\App\\Controllers\\Admin\\User', true)
+ 5 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-30 17:00:05 --> Undefined variable $session
+in APPPATH/Controllers/Admin/User.php on line 23.
+ 1 APPPATH/Controllers/Admin/User.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH/Controllers/Admin/User.php', 23)
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\User->validateLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-30 18:40:09 --> syntax error, unexpected double-quoted string "/>", expecting "," or ";"
+in APPPATH/Views/Admin/templates/header.php on line 23.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Admin/templates/header', [], true)
+ 3 APPPATH/Controllers/Admin/Admin.php(15): view('Admin/templates/header')
+ 4 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Admin->index()
+ 5 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-30 18:42:21 --> syntax error, unexpected token "<"
+in APPPATH/Views/Admin/templates/header.php on line 20.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Admin/templates/header', [], true)
+ 3 APPPATH/Controllers/Admin/Admin.php(15): view('Admin/templates/header')
+ 4 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Admin->index()
+ 5 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-30 18:43:32 --> syntax error, unexpected double-quoted string ">", expecting "," or ";"
+in APPPATH/Views/Admin/templates/header.php on line 23.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Admin/templates/header', [], true)
+ 3 APPPATH/Controllers/Admin/Admin.php(15): view('Admin/templates/header')
+ 4 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Admin->index()
+ 5 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
