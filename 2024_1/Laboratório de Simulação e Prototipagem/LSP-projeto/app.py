@@ -12,6 +12,52 @@ app.config['MYSQL_PASSWORD'] = ''
 app.config['MYSQL_DB'] = 'db_lsp'
 mysql = MySQL(app)
 
+# Listas de treinos por categoria
+trainings = {
+    "Peito": [
+        "Supino Reto",
+        "Supino Inclinado",
+        "Voador Frontal",
+        "Crucifixo Reto",
+        "Crucifixo Inclinado"
+    ],
+    "Costas": [
+        "Barra Fixa",
+        "Pullover na Polia",
+        "Puxada Frontal",
+        "Remada Baixa",
+        "Remada Curvada"
+    ],
+    "Ombros": [
+        "Desenvolvimento com Halteres",
+        "Elevação Lateral",
+        "Elevação Frontal",
+        "Arnold Press",
+        "Desenvolvimento Militar"
+    ],
+    "Braços": [
+        "Rosca Direta",
+        "Rosca Martelo",
+        "Tríceps Testa",
+        "Tríceps Pulley",
+        "Rosca Scott"
+    ],
+    "Abdômen": [
+        "Abdominal Reto",
+        "Abdominal Infra",
+        "Prancha Frontal",
+        "Elevação de Pernas",
+        "Abdominal na Bola"
+    ],
+    "Pernas": [
+        "Agachamento Livre",
+        "Leg Press",
+        "Extensão de Pernas",
+        "Flexão de Pernas",
+        "Afundo"
+    ]
+}
+
 # Rota principal
 @app.route('/')
 def index():
@@ -142,60 +188,22 @@ def logout():
 def terms():
     return render_template('terms.html')
 
-# Rota para criar treinos
-@app.route('/criar_treino')
+# Rota para criar treinos com categorias
+@app.route('/criar_treino', methods=['GET', 'POST'])
 def criar_treino():
-    return render_template('criar_treino.html')
+    if request.method == 'POST':
+        selected_trainings = {}
+        for category in trainings.keys():
+            selected_trainings[category] = request.form.getlist(category)
 
-# Treinos de peito
-@app.route('/treinos_peito/supino_reto')
-def supino_reto():
-    return render_template('treinos_peito/supino_reto.html')
+        return render_template('selected_trainings.html', selected_trainings=selected_trainings)
+    return render_template('criar_treino.html', trainings=trainings)
 
-# Treinos de peito
-@app.route('/treinos_peito/supino_inclinado')
-def supino_inclinado():
-    return render_template('treinos_peito/supino_inclinado.html')
+# Rota para exibir treinos selecionados
+@app.route('/selected_trainings')
+def selected_trainings():
+    return render_template('selected_trainings.html')
 
-# Treinos de peito
-@app.route('/treinos_peito/voador_frontal')
-def voador_frontal():
-    return render_template('treinos_peito/voador_frontal.html')
-
-# Treinos de peito
-@app.route('/treinos_peito/crucifixo_reto')
-def crucifixo_reto():
-    return render_template('treinos_peito/crucifixo_reto.html')
-
-# Treinos de peito
-@app.route('/treinos_peito/crucifixo_inclinado')
-def crucifixo_inclinado():
-    return render_template('treinos_peito/crucifixo_inclinado.html')
-
-# Treinos de costas
-@app.route('/treinos_costas/barra_fixa')
-def barra_fixa():
-    return render_template('treinos_costas/barra_fixa.html')
-
-# Treinos de costas
-@app.route('/treinos_costas/pullover_polia')
-def pullover_polia():
-    return render_template('treinos_costas/pullover_polia.html')
-
-# Treinos de costas
-@app.route('/treinos_costas/puxada_frontal')
-def puxada_frontal():
-    return render_template('treinos_costas/puxada_frontal.html')
-
-# Treinos de costas
-@app.route('/treinos_costas/remada_baixa')
-def remada_baixa():
-    return render_template('treinos_costas/remada_baixa.html')
-
-# Treinos de costas
-@app.route('/treinos_costas/remada_curvada')
-def remada_curvada():
-    return render_template('treinos_costas/remada_curvada.html')    
 
 @app.route('/desafios')
 def desafios():

@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <title>Criar Treino</title>
     <link rel="stylesheet" href="/static/css/style.css">
-
-    <title>Dashboard</title>
+    <link rel="stylesheet" href="/feather-icon/css/feather.css">
+    <link rel="icon" href="/static/imgs/favicon.png" type="image/x-icon">
 </head>
 
 <header>
@@ -23,59 +18,134 @@
         </ul>
     </div>
 </header>
+
 <body>
     <div class="container-criar-treino">
         <h3>Qual grupo muscular você deseja criar treino? </h3>
-        <details>
-            <summary>Peito</summary>
-            <li><a href="{{ url_for('supino_reto') }}">Supino Reto</a></li>
-            <li><a href="{{ url_for('supino_inclinado') }}">Supino Inclinado</a></li>
-            <li><a href="{{ url_for('voador_frontal') }}">Voador Frontal</a></li>
-            <li><a href="{{ url_for('crucifixo_reto') }}">Crucifixo Reto</a></li>
-            <li><a href="{{ url_for('crucifixo_inclinado') }}">Crucifixo Inclinado</a></li>
-        </details>
-        <details>
-            <summary>Costas</summary>
-            <li><a href="{{ url_for('barra_fixa') }}">Barra Fixa</a></li>
-            <li><a href="{{ url_for('pullover_polia') }}">Pullover Polia</a></li>
-            <li><a href="{{ url_for('puxada_frontal') }}">Puxada Frontal</a></li>
-            <li><a href="{{ url_for('remada_baixa') }}">Remada Baixa</a></li>
-            <li><a href="{{ url_for('remada_curvada') }}">Remada Curvada</a></li>
-        </details>
-        <details>
-            <summary>Biceps</summary>
-            <p>Conteúdo 3</p>
-        </details>
-        <details>
-            <summary>Triceps</summary>
-            <p>Conteúdo 4</p>
-        </details>
-        <details>
-            <summary>Antebraço</summary>
-            <p>Conteúdo 5</p>
-        </details>
-        <details>
-            <summary>Pernas</summary>
-            <p>Conteúdo 6</p>
-        </details>
-        <details>
-            <summary>Lombar</summary>
-            <p>Conteúdo 7</p>
-        </details>
+        <div class="perguntas">
+            <div class="perguntas-frequentes">
+                <details class="accordion-details">
+                    <summary class="accordion-summary feather d-flex">
+                        <p class="text-lg semibold text-start"><i class="feather icon-box strong-cereja semibold"></i>Peito.</p>
+                    </summary>
+                    <p class="details-content regular asfalto-400">
+                        O treino de peito foca principalmente nos músculos peitorais maiores e menores, que são essenciais para movimentos de empurrar. Exercícios comuns incluem supino, flexões e crucifixo.
+                    </p>
+                    <button class="btn-cereja">Criar Treino</button>
+                </details>
+                <div class="linha"></div>
+                <details class="accordion-details">
+                    <summary class="accordion-summary feather">
+                        <p class="text-lg semibold text-start"><i class="feather icon-box strong-cereja semibold"></i>Costas</p>
+                    </summary>
+                    <p class="details-content asfalto-400">
+                        O treino de costas visa os músculos latíssimos do dorso, trapézios e romboides. Exercícios como puxada, remada e levantamento terra ajudam a fortalecer essa região, melhorando a postura e a força geral.
+                    </p>
+                    <button class="btn-cereja">Criar Treino</button>
+                </details>
+                <div class="linha"></div>
+                <details class="accordion-details">
+                    <summary class="accordion-summary feather">
+                        <p class="text-lg semibold text-start"><i class="feather icon-box strong-cereja semibold"></i>Ombros</p>
+                    </summary>
+                    <p class="details-content asfalto-400">
+                        O treino de ombros envolve os músculos deltóides e trapézios. Movimentos como elevações laterais, desenvolvimento militar e encolhimentos são eficazes para fortalecer e definir os ombros.
+                    </p>
+                    <button class="btn-cereja">Criar Treino</button>
+                </details>
+                <div class="linha"></div>
+                <details class="accordion-details">
+                    <summary class="accordion-summary feather">
+                        <p class="text-lg semibold text-start"><i class="feather icon-box strong-cereja semibold"></i>Braços</p>
+                    </summary>
+                    <p class="details-content asfalto-400">
+                        O treino de braços foca nos bíceps e tríceps. Exercícios como rosca direta, rosca martelo, tríceps pulley e mergulhos ajudam a desenvolver força e massa muscular nesta área.
+                    </p>
+                    <button class="btn-cereja">Criar Treino</button>
+                </details>
+                <div class="linha"></div>
+                <details class="accordion-details">
+                    <summary class="accordion-summary feather">
+                        <p class="text-lg semibold text-start"><i class="feather icon-box strong-cereja semibold"></i>Abdômen</p>
+                    </summary>
+                    <p class="details-content asfalto-400">
+                        O treino de abdômen trabalha os músculos abdominais superiores, inferiores e oblíquos. Exercícios como abdominais, pranchas e elevações de perna são essenciais para um core forte e definido.
+                    </p>
+                    <button class="btn-cereja">Criar Treino</button>
+                </details>
+                <div class="linha"></div>
+                <details class="accordion-details">
+                    <summary class="accordion-summary feather">
+                        <p class="text-lg semibold text-start"><i class="feather icon-box strong-cereja semibold"></i>Pernas</p>
+                    </summary>
+                    <p class="details-content asfalto-400">
+                        O treino de pernas inclui exercícios que trabalham quadríceps, isquiotibiais, glúteos e panturrilhas. Agachamentos, leg press, afundos e levantamento terra romeno são fundamentais para fortalecer e tonificar as pernas.
+                    </p>
+                    <button class="btn-cereja">Criar Treino</button>
+                </details>
+            </div>
+        </div>
     </div>
-
 </body>
+
 <footer>
     <div class="navbar">
         <ul>
-            <li><a href="{{ url_for('criar_treino') }}">Treino</a></li>
-            <li><a href="{{ url_for('evolucao') }}">Evolução</a></li>
-            <li><a href="{{ url_for('desafios') }}">Desafios</a></li>
-            <li><a href="{{ url_for('profile') }}">Perfil</a></li>
+          
+            <li><a href="criar-treino.html">Treino</a></li>
+            <li><a href="evolucao.html">Evolução</a></li>
+            <li><a href="#contact">Desafios</a></li>
+            <li><a href="#contact">Perfil</a></li>
+            
         </ul>
-        <a href="{{ url_for('logout') }}">Sair</a>
+        
     </div>
-    <div></div>
+    <h5>Fale com um de nossos profissionais</h5>
+    <div class="grid-profissionais">
+        <div class="profissional">
+            <h6>Julio Balestrin</h6>
+        </div>
+        <div class="profissional">
+            <h6>Renato Cariri</h6>
+        </div>
+        <div class="profissional">
+            <h6>Jorlan all day</h6>
+        </div>
+        <div class="profissional">
+            <h6>Paulo Muzy</h6>
+        </div>
+    </div>
+    <script>
+   document.querySelectorAll('.accordion-details').forEach(details => {
+        const content = details.querySelector('.details-content');
+        
+        details.addEventListener('toggle', (event) => {
+            if (details.open) {
+                // Fecha todos os outros detalhes
+                document.querySelectorAll('.accordion-details').forEach(otherDetails => {
+                    if (otherDetails !== details && otherDetails.open) {
+                        otherDetails.open = false;
+                        otherDetails.querySelector('.details-content').style.maxHeight = 0;
+                    }
+                });
+
+                // Define a altura máxima para iniciar a animação
+                content.style.maxHeight = content.scrollHeight + 'px';
+            } else {
+                // Retarda a redefinição da altura para permitir a animação de fechamento
+                content.style.maxHeight = content.scrollHeight + 'px'; // Inicializa com a altura atual
+                setTimeout(() => {
+                    content.style.maxHeight = 0;
+                }, 10); // Pequeno atraso para permitir a animação
+            }
+        });
+
+        // Garantir que a altura máxima seja correta quando a página é carregada
+        if (details.open) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+        }
+    });
+    </script>
 </footer>
 
 </html>

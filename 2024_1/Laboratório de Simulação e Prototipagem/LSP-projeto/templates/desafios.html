@@ -1,2 +1,91 @@
-<h2>desafio</h2>
-<a href="{{ url_for('dashboard') }}">Dash</a>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/feather-icon/css/feather.css">
+    <link rel="icon" href="/static/imgs/favicon.png" type="image/x-icon">
+
+    <title>Desafios</title>
+</head>
+
+<header>
+    <div class="navbar">
+        <ul>
+            <li><a href="{{ url_for('criar_treino') }}">Treino</a></li>
+            <li><a href="{{ url_for('evolucao') }}">Evolução</a></li>
+            <li><a href="{{ url_for('desafios') }}">Desafios</a></li>
+            <li><a href="{{ url_for('profile') }}">Perfil</a></li>
+        </ul>
+    </div>
+</header>
+
+<body>
+    <h3>Desafios</h3>
+</body>
+
+<footer>
+    <div class="navbar">
+            <ul>
+                    <li><a href="{{ url_for('criar_treino') }}">Treino</a></li>
+                    <li><a href="{{ url_for('evolucao') }}">Evolução</a></li>
+                    <li><a href="{{ url_for('desafios') }}">Desafios</a></li>
+                    <li><a href="{{ url_for('profile') }}">Perfil</a></li>
+            </ul>
+            <a href="{{ url_for('logout') }}">Sair</a>
+    </div>
+    <h5>Fale com um de nossos profissionais</h5>
+    <div class="grid-profissionais">
+        <div class="profissional">
+            <h6>Julio Balestrin</h6>
+        </div>
+        <div class="profissional">
+            <h6>Renato Cariri</h6>
+        </div>
+        <div class="profissional">
+            <h6>Jorlan all day</h6>
+        </div>
+        <div class="profissional">
+            <h6>Paulo Muzy</h6>
+        </div>
+    </div>
+    <script>
+   document.querySelectorAll('.accordion-details').forEach(details => {
+        const content = details.querySelector('.details-content');
+        
+        details.addEventListener('toggle', (event) => {
+            if (details.open) {
+                // Fecha todos os outros detalhes
+                document.querySelectorAll('.accordion-details').forEach(otherDetails => {
+                    if (otherDetails !== details && otherDetails.open) {
+                        otherDetails.open = false;
+                        otherDetails.querySelector('.details-content').style.maxHeight = 0;
+                    }
+                });
+
+                // Define a altura máxima para iniciar a animação
+                content.style.maxHeight = content.scrollHeight + 'px';
+            } else {
+                // Retarda a redefinição da altura para permitir a animação de fechamento
+                content.style.maxHeight = content.scrollHeight + 'px'; // Inicializa com a altura atual
+                setTimeout(() => {
+                    content.style.maxHeight = 0;
+                }, 10); // Pequeno atraso para permitir a animação
+            }
+        });
+
+        // Garantir que a altura máxima seja correta quando a página é carregada
+        if (details.open) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+        }
+    });
+    </script>
+</footer>
+
+</html>

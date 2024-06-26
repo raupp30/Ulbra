@@ -23,6 +23,7 @@
         </ul>
     </div>
 </header>
+
 <h6></h6>
 <body>
     <div class="container-grid">
@@ -36,15 +37,60 @@
 </body>
 <footer>
     <div class="navbar">
-        <ul>
-            <li><a href="{{ url_for('criar_treino') }}">Treino</a></li>
-            <li><a href="{{ url_for('evolucao') }}">Evolução</a></li>
-            <li><a href="{{ url_for('desafios') }}">Desafios</a></li>
-            <li><a href="{{ url_for('profile') }}">Perfil</a></li>
-        </ul>
-        <a href="{{ url_for('logout') }}">Sair</a>
+            <ul>
+                    <li><a href="{{ url_for('criar_treino') }}">Treino</a></li>
+                    <li><a href="{{ url_for('evolucao') }}">Evolução</a></li>
+                    <li><a href="{{ url_for('desafios') }}">Desafios</a></li>
+                    <li><a href="{{ url_for('profile') }}">Perfil</a></li>
+            </ul>
+            <a href="{{ url_for('logout') }}">Sair</a>
     </div>
-    <div></div>
+    <h5>Fale com um de nossos profissionais</h5>
+    <div class="grid-profissionais">
+        <div class="profissional">
+            <h6>Julio Balestrin</h6>
+        </div>
+        <div class="profissional">
+            <h6>Renato Cariri</h6>
+        </div>
+        <div class="profissional">
+            <h6>Jorlan all day</h6>
+        </div>
+        <div class="profissional">
+            <h6>Paulo Muzy</h6>
+        </div>
+    </div>
+    <script>
+   document.querySelectorAll('.accordion-details').forEach(details => {
+        const content = details.querySelector('.details-content');
+        
+        details.addEventListener('toggle', (event) => {
+            if (details.open) {
+                // Fecha todos os outros detalhes
+                document.querySelectorAll('.accordion-details').forEach(otherDetails => {
+                    if (otherDetails !== details && otherDetails.open) {
+                        otherDetails.open = false;
+                        otherDetails.querySelector('.details-content').style.maxHeight = 0;
+                    }
+                });
+
+                // Define a altura máxima para iniciar a animação
+                content.style.maxHeight = content.scrollHeight + 'px';
+            } else {
+                // Retarda a redefinição da altura para permitir a animação de fechamento
+                content.style.maxHeight = content.scrollHeight + 'px'; // Inicializa com a altura atual
+                setTimeout(() => {
+                    content.style.maxHeight = 0;
+                }, 10); // Pequeno atraso para permitir a animação
+            }
+        });
+
+        // Garantir que a altura máxima seja correta quando a página é carregada
+        if (details.open) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+        }
+    });
+    </script>
 </footer>
 
 </html>
