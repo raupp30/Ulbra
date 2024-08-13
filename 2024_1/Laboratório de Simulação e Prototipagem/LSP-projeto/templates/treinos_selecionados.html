@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Treinos Selecionados</title>
+</head>
+<body>
+    <h1>Treinos Selecionados</h1>
+    {% for category, exercises in selected_trainings.items() %}
+        <h2>{{ category }}</h2>
+        <ul>
+            {% for exercise in exercises %}
+                <li>
+                    <strong>{{ exercise.nome }}</strong><br>
+                    {{ exercise.descricao }}<br>
+                    <img src="{{ exercise.foto_url }}" alt="{{ exercise.nome }}" style="width:100px;height:100px;">
+                </li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+    <form action="{{ url_for('criar_treino') }}" method="GET">
+        <button type="submit">Repetir Treino Anterior</button>
+    </form>
+</body>
+</html>

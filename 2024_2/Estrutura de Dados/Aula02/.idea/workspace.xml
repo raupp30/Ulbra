@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ee61a9fe-c3f8-49b4-a9bd-ed5db13a6420" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Desenvolvimento de Sistemas Móveis/Aula01 - 07.03/tde.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Desenvolvimento de Sistemas Móveis/Aula02 - 14.03/atv01.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Desenvolvimento de Sistemas Móveis/Aula03 - 21.03/atv01.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Desenvolvimento de Sistemas Móveis/Aula03 - 21.03/atv02.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Desenvolvimento de Sistemas Móveis/Aula03 - 21.03/atv03.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Desenvolvimento de Sistemas Móveis/Aula03 - 21.03/atv04.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Desenvolvimento de Sistemas Móveis/Aula03 - 21.03/atv05.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Desenvolvimento de Sistemas Móveis/Aula04 - 28.03 - Semi Presencial/nothing.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Desenvolvimento de Sistemas Móveis/Aula06 - 11.04 - Semi Presencial/nothing.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Laboratório de Simulação e Prototipagem/LSP-projeto/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2024_1/Laboratório de Simulação e Prototipagem/LSP-projeto/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Laboratório de Simulação e Prototipagem/LSP-projeto/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2024_1/Laboratório de Simulação e Prototipagem/LSP-projeto/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Laboratório de Simulação e Prototipagem/LSP-projeto/templates/criar_treino.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2024_1/Laboratório de Simulação e Prototipagem/LSP-projeto/templates/criar_treino.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Laboratório de Simulação e Prototipagem/LSP-projeto/templates/evolucao.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2024_1/Laboratório de Simulação e Prototipagem/LSP-projeto/templates/evolucao.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/.idea/Tecnologias Móveis.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/Aula01 - 05.03/nothing.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/Aula02 - 13.03/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/Aula02 - 13.03/.idea/Aula02.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/Aula02 - 13.03/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/Aula02 - 13.03/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/Aula02 - 13.03/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/Aula02 - 13.03/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/Aula02 - 13.03/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/Aula02 - 13.03/tde.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/Aula03 - 20.03/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/Aula03 - 20.03/.idea/Aula02.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/Aula03 - 20.03/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/Aula03 - 20.03/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/Aula03 - 20.03/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/Aula03 - 20.03/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/Aula03 - 20.03/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/Aula03 - 20.03/atv01.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/Aula03 - 20.03/atv02.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/Aula03 - 20.03/atv03.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/Aula04 - 23.03 - Semi Presencial/nothing.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/Aula05 - 27.03/atv01.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/Aula05 - 27.03/atv02.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/Aula05 - 27.03/atv03.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/Aula05 - 27.03/atv04.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/Aula06 - 03.04/TDE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2024_1/Tecnologias Móveis/Aula07 - 10.04 - Semi Presencial/nothing.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2kZz5lIBWXUrETOpSoi7yt5Ttk2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ee61a9fe-c3f8-49b4-a9bd-ed5db13a6420" name="Changes" comment="" />
+      <created>1723505707246</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1723505707246</updated>
+    </task>
+    <servers />
+  </component>
+</project>

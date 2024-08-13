@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Estrutura de Dados.iml" filepath="$PROJECT_DIR$/Estrutura de Dados.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tde_aula02/tde_aula02.iml" filepath="$PROJECT_DIR$/tde_aula02/tde_aula02.iml" />
+    </modules>
+  </component>
+</project>

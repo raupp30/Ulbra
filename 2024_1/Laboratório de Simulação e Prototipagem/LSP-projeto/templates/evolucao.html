@@ -25,17 +25,82 @@
 </header>
 
 <body>
-    <div class="container-evolucao">
-        <div class="topo-evolucao">
-            <h2>Confira os seus dados evolutivos</h2>
-            <p>Os dados apresentados a seguir são baseados nas informações fornecidas por você semanalmente no site.</p>
-        </div>
-        <div class="div-grafico">
-           <img src="/imgs/graphics.jpg" alt="">
-           <h6>aqui vai uma legenda do grafico</h6>
-        </div>
+    <title>Calculadora de IMC</title>
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .result span {
+            font-weight: normal;
+            color: #333;
+        }
+    </style>
+    
+    <div class="container">
+        <h1 class="text-center mb-4">Calculadora de IMC</h1>
+        <form id="imcForm" onsubmit="return calculateIMC();">
+            <div class="mb-3">
+                <label for="weight" class="form-label">Peso (kg):</label>
+                <input type="number" class="form-control" id="weight" name="weight" required>
+            </div>
+            <div class="mb-3">
+                <label for="height" class="form-label">Altura (cm):</label>
+                <input type="number" class="form-control" id="height" name="height" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Calcular IMC</button>
+        </form>
+        <div id="result" class="result text-center mt-4"></div>
     </div>
 
+    <script>
+        function calculateIMC() {
+            // Obtém os valores do formulário
+            const weight = parseFloat(document.getElementById('weight').value);
+            const heightCm = parseFloat(document.getElementById('height').value);
+
+            // Converte a altura de cm para metros
+            const heightM = heightCm / 100;
+
+            // Calcula o IMC
+            const imc = weight / (heightM * heightM);
+
+            // Classificação do IMC
+            let classification = '';
+            if (imc < 18.5) {
+                classification = 'Abaixo do peso';
+            } else if (imc >= 18.5 && imc < 24.9) {
+                classification = 'Peso normal';
+            } else if (imc >= 25 && imc < 29.9) {
+                classification = 'Sobrepeso';
+            } else if (imc >= 30 && imc < 34.9) {
+                classification = 'Obesidade Grau I';
+            } else if (imc >= 35 && imc < 39.9) {
+                classification = 'Obesidade Grau II';
+            } else {
+                classification = 'Obesidade Grau III';
+            }
+
+            // Exibe o resultado
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `Seu IMC é <span>${imc.toFixed(2)}</span> (${classification})`;
+
+            // Impede o envio do formulário
+            return false;
+        }
+    </script>
 </body>
 
 <footer>

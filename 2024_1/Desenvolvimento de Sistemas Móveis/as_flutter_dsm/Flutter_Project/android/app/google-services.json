@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1020681200431",
+    "project_id": "flutterproject-229d4",
+    "storage_bucket": "flutterproject-229d4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1020681200431:android:26cae55ad5083888abb7da",
+        "android_client_info": {
+          "package_name": "com.example.exercicioflutterapi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_-X881zAVB8bfx6wNCX_E6ogQKYr4HyQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

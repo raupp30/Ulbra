@@ -12,51 +12,8 @@ app.config['MYSQL_PASSWORD'] = ''
 app.config['MYSQL_DB'] = 'db_lsp'
 mysql = MySQL(app)
 
-# Listas de treinos por categoria
-trainings = {
-    "Peito": [
-        "Supino Reto",
-        "Supino Inclinado",
-        "Voador Frontal",
-        "Crucifixo Reto",
-        "Crucifixo Inclinado"
-    ],
-    "Costas": [
-        "Barra Fixa",
-        "Pullover na Polia",
-        "Puxada Frontal",
-        "Remada Baixa",
-        "Remada Curvada"
-    ],
-    "Ombros": [
-        "Desenvolvimento com Halteres",
-        "Elevação Lateral",
-        "Elevação Frontal",
-        "Arnold Press",
-        "Desenvolvimento Militar"
-    ],
-    "Braços": [
-        "Rosca Direta",
-        "Rosca Martelo",
-        "Tríceps Testa",
-        "Tríceps Pulley",
-        "Rosca Scott"
-    ],
-    "Abdômen": [
-        "Abdominal Reto",
-        "Abdominal Infra",
-        "Prancha Frontal",
-        "Elevação de Pernas",
-        "Abdominal na Bola"
-    ],
-    "Pernas": [
-        "Agachamento Livre",
-        "Leg Press",
-        "Extensão de Pernas",
-        "Flexão de Pernas",
-        "Afundo"
-    ]
-}
+# Listas de categorias
+categories = ["Peito", "Costas", "Ombros", "Braços", "Abdômen", "Pernas"]
 
 # Rota principal
 @app.route('/')
@@ -88,7 +45,7 @@ def login():
 
     return render_template('login.html')
 
-#Perfil
+# Perfil
 @app.route('/profile', methods=['GET', 'POST'])
 def profile():
     if 'email' in session:
@@ -110,7 +67,6 @@ def profile():
                 altura = request.form['altura']
                 idade = request.form['idade']
                 tipo_sanguineo = request.form['tipo_sanguineo']
-    
 
                 cur = mysql.connection.cursor()
                 cur.execute("""
@@ -191,19 +147,103 @@ def terms():
 # Rota para criar treinos com categorias
 @app.route('/criar_treino', methods=['GET', 'POST'])
 def criar_treino():
+    if 'email' not in session:
+        return redirect(url_for('login'))
+
+    email = session['email']
+
     if request.method == 'POST':
         selected_trainings = {}
-        for category in trainings.keys():
+        for category in categories:
             selected_trainings[category] = request.form.getlist(category)
 
-        return render_template('selected_trainings.html', selected_trainings=selected_trainings)
-    return render_template('criar_treino.html', trainings=trainings)
+        # Verificar se pelo menos um treino foi selecionado
+        if not any(selected_trainings.values()):
+            flash('Selecione pelo menos um treino antes de salvar.', 'error')
+            return redirect(url_for('criar_treino'))
 
-# Rota para exibir treinos selecionados
-@app.route('/selected_trainings')
-def selected_trainings():
-    return render_template('selected_trainings.html')
+        # Salvar os treinos selecionados no banco de dados
+        cur = mysql.connection.cursor()
 
+        # Excluir os treinos anteriores selecionados pelo usuário
+        cur.execute("DELETE FROM user_selected_trainings WHERE user_email = %s", (email,))
+        
+        # Inserir os novos treinos selecionados
+        for category, exercises in selected_trainings.items():
+            for exercise in exercises:
+                cur.execute("""
+                    INSERT INTO user_selected_trainings (user_email, category, exercise_name)
+                    VALUES (%s, %s, %s)
+                """, (email, category, exercise))
+
+        mysql.connection.commit()
+        cur.close()
+
+        return redirect(url_for('treinos_selecionados'))
+
+    # Recuperar os treinos salvos pelo usuário
+    cur = mysql.connection.cursor()
+    cur.execute("SELECT category, exercise_name FROM user_selected_trainings WHERE user_email = %s", (email,))
+    saved_trainings = cur.fetchall()
+    cur.close()
+
+    # Organizar os treinos salvos por categoria
+    user_trainings = {}
+    for category, exercise in saved_trainings:
+        if category not in user_trainings:
+            user_trainings[category] = []
+        user_trainings[category].append(exercise)
+
+    # Carregar informações completas dos treinos do banco de dados
+    trainings_info = {}
+    for category in categories:
+        query = f"SELECT nome, descricao, foto_url FROM treinos_{category.lower()}"
+        cur = mysql.connection.cursor()
+        cur.execute(query)
+        trainings_info[category] = cur.fetchall()
+        cur.close()
+
+    return render_template('criar_treino.html', trainings=trainings_info, user_trainings=user_trainings)
+
+
+# Rota para exibir treinos selecionados pelo usuário
+@app.route('/treinos_selecionados')
+def treinos_selecionados():
+    if 'email' not in session:
+        return redirect(url_for('login'))
+
+    email = session['email']
+
+    cur = mysql.connection.cursor()
+    cur.execute("SELECT category, exercise_name FROM user_selected_trainings WHERE user_email = %s", (email,))
+    saved_trainings = cur.fetchall()
+    cur.close()
+
+    # Organizar os treinos por categoria
+    selected_trainings = {}
+    for category, exercise in saved_trainings:
+        if category not in selected_trainings:
+            selected_trainings[category] = []
+        selected_trainings[category].append(exercise)
+
+    # Recuperar informações completas dos treinos selecionados
+    trainings_info = {}
+    for category, exercises in selected_trainings.items():
+        for exercise in exercises:
+            query = f"SELECT descricao, foto_url FROM treinos_{category.lower()} WHERE nome = %s"
+            cur = mysql.connection.cursor()
+            cur.execute(query, (exercise,))
+            info = cur.fetchone()
+            if category not in trainings_info:
+                trainings_info[category] = []
+            trainings_info[category].append({
+                'nome': exercise,
+                'descricao': info[0],
+                'foto_url': info[1]
+            })
+            cur.close()
+
+    return render_template('treinos_selecionados.html', selected_trainings=trainings_info)
 
 @app.route('/desafios')
 def desafios():
