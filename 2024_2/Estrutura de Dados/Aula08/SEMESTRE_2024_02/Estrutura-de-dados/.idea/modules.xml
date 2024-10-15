@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AULA_02/AULA_02.iml" filepath="$PROJECT_DIR$/AULA_02/AULA_02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Estrutura-de-dados.iml" filepath="$PROJECT_DIR$/.idea/Estrutura-de-dados.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AP1_Estrutura_de_Dados/Ex01/Ex01.iml" filepath="$PROJECT_DIR$/AP1_Estrutura_de_Dados/Ex01/Ex01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AP1_Estrutura_de_Dados/Ex02/Ex02.iml" filepath="$PROJECT_DIR$/AP1_Estrutura_de_Dados/Ex02/Ex02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TDE_AULA01/TDE_AULA01.iml" filepath="$PROJECT_DIR$/TDE_AULA01/TDE_AULA01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TDE_AULA02/TDE_AULA02.iml" filepath="$PROJECT_DIR$/TDE_AULA02/TDE_AULA02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TDE_AULA04/TDE_AULA04.iml" filepath="$PROJECT_DIR$/TDE_AULA04/TDE_AULA04.iml" />
+    </modules>
+  </component>
+</project>
