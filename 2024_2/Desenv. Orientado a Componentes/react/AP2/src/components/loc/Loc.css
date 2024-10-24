@@ -1,0 +1,44 @@
+/* isolando o componente Loc */
+.loc-container {
+    margin: 150px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* botão dentro do Loc */
+.loc-container .loc-button {
+    padding: 8px 12px;
+    background-color: #65ABFD;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.loc-container .loc-button:hover {
+    background-color: #4b9bd8;
+}
+
+/* cabeçalhos dentro do Loc */
+.loc-container h3 {
+    margin: 5px 0;
+    color: #333;
+}
+
+/* responsibidade para garantir que o conteúdo do Loc se ajuste em telas menores */
+@media (max-width: 768px) {
+    .loc-container {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .loc-container .loc-button {
+        width: 100%;
+        text-align: center;
+    }
+}

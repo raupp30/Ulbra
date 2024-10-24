@@ -1,0 +1,107 @@
+/* geral */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* contêiner principal */
+.divCadastro {
+    max-width: 400px;
+    margin: 150px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* titulo principal */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* inputs */
+input[type="text"], select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #6c63ff;
+}
+
+/* botao submit */
+button {
+    padding: 10px;
+    background-color: #65ABFD;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #5848d3;
+}
+
+/* cards */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 40px;
+}
+
+/* cards caadastro */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* img cadastro */
+.card img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* texto dentro dos cards */
+.card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.card p strong {
+    color: #333;
+}
