@@ -1,0 +1,63 @@
+.Contato-container {
+    max-width: 600px; /* Largura máxima do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    padding: 80px; /* Espaçamento interno */
+    margin-top: 100px;
+    background-color: #000000; /* Cor de fundo do contêiner */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    color: white;
+}
+
+h1 {
+    text-align: center; /* Centraliza o título */
+    color: #ffffff; /* Cor do texto */
+}
+
+form {
+    display: flex; /* Alinha os itens do formulário em linha */
+    flex-direction: column; /* Coloca os itens em coluna */
+}
+
+input {
+    padding: 10px; /* Espaçamento interno dos inputs */
+    margin: 10px 0; /* Espaçamento vertical entre os inputs */
+    border: 1px solid #ccc; /* Borda padrão */
+    border-radius: 4px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+button {
+    padding: 10px; /* Espaçamento interno do botão */
+    background-color: #28a745; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 4px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor em forma de ponteiro */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+button:hover {
+    background-color: #218838; /* Cor do botão ao passar o mouse */
+}
+
+.ListaDePessoas {
+    margin-top: 20px; /* Espaço acima da lista */
+}
+
+.ListaDePessoas h2 {
+    color: #333; /* Cor do texto do título da lista */
+}
+
+.ListaDePessoas ul {
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove preenchimento padrão */
+}
+
+.ListaDePessoas li {
+    padding: 10px; /* Espaçamento interno dos itens da lista */
+    background-color: #e9ecef; /* Cor de fundo dos itens da lista */
+    border-radius: 4px; /* Bordas arredondadas */
+    margin-bottom: 10px; /* Espaçamento entre os itens da lista */
+}

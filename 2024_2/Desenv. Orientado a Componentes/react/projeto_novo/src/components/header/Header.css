@@ -1,0 +1,30 @@
+.header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center; /* Alinha verticalmente os itens */
+    padding: 30px; /* Espaçamento interno do cabeçalho */
+    background-color: black; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    width: 100%;
+}
+
+.logo {
+    width: 60px; /* Largura do logo */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.nav-links {
+    display: flex; /* Alinha os links em linha */
+    margin-right: 120px;
+}
+
+.nav-links a {
+    color: white; /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado */
+    margin-left: 20px; /* Espaçamento entre os links */
+    transition: color 0.3s; /* Transição suave para a cor */
+}
+
+.nav-links a:hover {
+    color: #61dafb; /* Cor dos links ao passar o mouse */
+}
