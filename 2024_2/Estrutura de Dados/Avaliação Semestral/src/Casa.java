@@ -1,4 +1,3 @@
-
 public class Casa {
     private String tipo;
     private String nome;
@@ -11,7 +10,7 @@ public class Casa {
         this.tipo = tipo;
         this.nome = nome;
         this.valorImovel = valorImovel;
-        this.aluguel = valorImovel;
+        this.aluguel = aluguel;
         this.proprietario = null;
     }
 

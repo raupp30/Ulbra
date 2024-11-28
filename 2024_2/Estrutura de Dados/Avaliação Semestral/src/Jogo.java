@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Jogo {
-    private Tabuleiro tabuleiro;
+    Tabuleiro tabuleiro; // Corrigido para ser acessível na Main
     private ArrayList<Jogador> jogadores;
     private int rodadasMax;
     private int rodadaAtual;
@@ -14,16 +14,20 @@ public class Jogo {
         this.rodadaAtual = 1;
     }
 
-    //metodo p/ add jogadores
-
+    // Método para adicionar jogadores
     public void addJogador(Jogador jogador) {
         jogadores.add(jogador);
     }
 
-    //metodo p/ movimentar jogadores
+    // Método para retornar a lista de jogadores
+    public ArrayList<Jogador> getJogadores() {
+        return jogadores;
+    }
+
+    // Método para movimentar jogadores
     public void movimentarJogador(Jogador jogador) {
         Random dado = new Random();
-        int movimento = dado.nextInt(6) + 1; // numero entre 1 e 6
+        int movimento = dado.nextInt(6) + 1; // número entre 1 e 6
         System.out.println(jogador.getNome() + " tirou " + movimento + " no dado!");
 
         Casa posicaoAtual = jogador.getPosicao();
@@ -34,33 +38,40 @@ public class Jogo {
         jogador.setPosicao(posicaoAtual);
         System.out.println(jogador.getNome() + " está agora na casa: " + posicaoAtual.getNome());
 
-        //interação c/ a casa
+        // Interação com a casa
         interagirComCasa(jogador, posicaoAtual);
+
+        if (jogador.getPresoPor() > 0) {
+            jogador.setPresoPor(jogador.getPresoPor() - 1);
+            System.out.println(jogador.getNome() + " está preso e não pode se mover nesta rodada.");
+            return;
+        }
+
     }
 
-    //metodo para interações c/ a casa
-
+    // Método para interações com a casa
     private void interagirComCasa(Jogador jogador, Casa casa) {
         switch (casa.getTipo()) {
-            case "inicio":
+            case "Inicio":
                 jogador.setSaldo(jogador.getSaldo() + jogador.getSalario());
-                System.out.println(jogador.getNome() + " passou pelo inicio e recebeu seu salario!");
+                System.out.println(jogador.getNome() + " passou pelo início e recebeu seu salário!");
                 break;
             case "Imovel":
                 if (casa.getProprietario() == null) {
-                    if (jogador.getSalario() >= casa.getValorImovel()) {
+                    if (jogador.getSaldo() >= casa.getValorImovel()) {
                         jogador.setSaldo(jogador.getSaldo() - casa.getValorImovel());
                         casa.setProprietario(jogador);
                         jogador.addProprietario(casa);
-                        System.out.println(jogador.getNome() + " comprou o imovel " + casa.getNome());
+                        System.out.println(jogador.getNome() + " comprou o imóvel " + casa.getNome());
                     } else {
-                        System.out.println(jogador.getNome() + " não tem saldo suficiente para comprar o imovel.");
+                        System.out.println(jogador.getNome() + " não tem saldo suficiente para comprar o imóvel.");
                     }
-                }else if (casa.getProprietario() != jogador){
-                        double aluguel = casa.getAluguel();
-                        casa.getProprietario().setSaldo(casa.getProprietario().getSaldo() +aluguel);
-                        System.out.println(jogador.getNome() + " pagou aluguel de R$" + aluguel + " para " + casa.getProprietario().getNome());
-                    }
+                } else if (casa.getProprietario() != jogador) {
+                    double aluguel = casa.getAluguel();
+                    jogador.setSaldo(jogador.getSaldo() - aluguel);
+                    casa.getProprietario().setSaldo(casa.getProprietario().getSaldo() + aluguel);
+                    System.out.println(jogador.getNome() + " pagou aluguel de R$" + aluguel + " para " + casa.getProprietario().getNome());
+                }
                 break;
             case "Imposto":
                 double imposto = jogador.getSaldo() * 0.05;
@@ -72,14 +83,44 @@ public class Jogo {
                 jogador.setSaldo(jogador.getSaldo() + restituicao);
                 System.out.println(jogador.getNome() + " recebeu R$" + restituicao + " de restituição.");
                 break;
-                }
-        }
+            case "Prisao":
+                jogador.setPresoPor(2); // Número de rodadas preso
+                System.out.println(jogador.getNome() + " foi para a prisão por 2 rodadas!");
+                break;
+            case "Sorte":
+                double sorte = 500;
+                jogador.setSaldo(jogador.getSaldo() + sorte);
+                System.out.println(jogador.getNome() + " ganhou R$" + sorte + " de sorte!");
+                break;
+            case "Reves":
+                double reves = 300;
+                jogador.setSaldo(jogador.getSaldo() - reves);
+                System.out.println(jogador.getNome() + " perdeu R$" + reves + " de revés!");
+                break;
 
-        //metodo para iniciar o game
-        public void Iniciar(){
-        while (rodadaAtual <= rodadasMax){
+            // Implementar lógica para venda automática ou remoção do jogador.
+        }
+    }
+
+    public void venderImovel(Jogador vendedor, Jogador comprador, Casa casa, double valor) {
+        if (comprador.getSaldo() >= valor && casa.getProprietario() == vendedor) {
+            vendedor.setSaldo(vendedor.getSaldo() + valor);
+            comprador.setSaldo(comprador.getSaldo() - valor);
+            casa.setProprietario(comprador);
+            vendedor.removerProprietario(casa);
+            comprador.addProprietario(casa);
+            System.out.println(vendedor.getNome() + " vendeu o imóvel " + casa.getNome() + " para " + comprador.getNome() + " por R$" + valor);
+        } else {
+            System.out.println("Transação inválida.");
+        }
+    }
+
+
+    // Método para iniciar o jogo
+    public void iniciarJogo() {
+        while (rodadaAtual <= rodadasMax) {
             System.out.println("Rodada " + rodadaAtual);
-            for (Jogador jogador : jogadores){
+            for (Jogador jogador : jogadores) {
                 movimentarJogador(jogador);
             }
             rodadaAtual++;

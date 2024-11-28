@@ -4,15 +4,26 @@ public class Jogador {
     private String nome;
     private double saldo;
     private double salario;
-    private Casa posicao; //ref p/ a posição atual do tabuleiro
+    private Casa posicao; // ref p/ a posição atual do tabuleiro
     private ArrayList<Casa> propriedades;
+    public int presoPor;
 
     public Jogador(String nome, double saldo, double salario) {
         this.nome = nome;
         this.saldo = saldo;
         this.salario = salario;
         this.propriedades = new ArrayList<>();
+        int presoPor = 0;
     }
+
+    public int getPresoPor() {
+        return presoPor;
+    }
+
+    public void setPresoPor(int presoPor) {
+        this.presoPor = presoPor;
+    }
+
 
     public void addProprietario(Casa casa){
         propriedades.add(casa);
