@@ -1,43 +1,83 @@
-import java.util.ArrayList;
+class Casa {
+    String nome;
+    String tipo;
+    Imovel imovel;
+    Casa proxima;
+
+    Casa(String nome, String tipo) {
+        this.nome = nome;
+        this.tipo = tipo;
+    }
+
+    public Imovel getImovel() {
+        return imovel;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+}
 
 public class Tabuleiro {
     private Casa inicio;
-    private ArrayList<Casa> casas;
 
-    public Tabuleiro() {
-        casas = new ArrayList<>();
-    }
+    public void adicionarCasa(String nome, String tipo, Imovel imovel) {
+        Casa novaCasa = new Casa(nome, tipo);
+        novaCasa.imovel = imovel;
 
-    public void addCasa(Casa novaCasa) {
         if (inicio == null) {
             inicio = novaCasa;
-            inicio.setProxima(inicio); // faz o tabuleiro circular
+            inicio.proxima = inicio;
         } else {
             Casa atual = inicio;
-            while (atual.getProxima() != inicio) {
-                atual = atual.getProxima();
+            while (atual.proxima != inicio) {
+                atual = atual.proxima;
             }
-            atual.setProxima(novaCasa);
-            novaCasa.setProxima(inicio);
+            atual.proxima = novaCasa;
+            novaCasa.proxima = inicio;
         }
-        casas.add(novaCasa);
-    }
-
-    public ArrayList<Casa> getCasas() {
-        return casas;
     }
 
     public Casa getInicio() {
         return inicio;
     }
 
-    public void listarCasas() {
-        for (Casa casa : casas) {
-            System.out.println(casa.getNome() + " (" + casa.getTipo() + ")");
+    public Casa getCasaNaPosicao(int posicao) {
+        Casa atual = inicio;
+        for (int i = 0; i < posicao; i++) {
+            atual = atual.proxima;
         }
+        return atual;
     }
 
-    public void removerCasa(Casa casa) {
-        casas.remove(casa);
+    public int calcularTamanho() {
+        Casa atual = inicio;
+        int tamanho = 1;
+        while (atual.proxima != inicio) {
+            atual = atual.proxima;
+            tamanho++;
+        }
+        return tamanho;
     }
+
+    public void exibirTodasAsCasas() {
+
+        Casa atual = inicio;
+        int contador = 0;
+
+        do {
+            System.out.printf("Casa %d: Tipo=%s", contador, atual.tipo);
+            if (atual.imovel != null) {
+                System.out.printf(", Nome=%s, Preço=R$%.2f, Aluguel=R$%.2f",
+                        atual.imovel.getNome(),
+                        atual.imovel.getPrecoCompra(),
+                        atual.imovel.getPrecoAluguel());
+            }
+            System.out.println();
+            atual = atual.proxima;
+            contador++;
+        } while (atual != inicio);
+    }
+
 }

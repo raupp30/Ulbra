@@ -1,63 +1,59 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Jogador {
-    private String nome;
-    private double saldo;
-    private double salario;
-    private Casa posicao; // ref p/ a posição atual do tabuleiro
-    private ArrayList<Casa> propriedades;
-    public int presoPor;
+    String nome;
+    double saldo;
+    int posicaoAtual;
+    List<Imovel> propriedades = new ArrayList<>();
+    int rodadasNaPrisao = 0;
 
-    public Jogador(String nome, double saldo, double salario) {
+    Jogador(String nome, double saldoInicial) {
         this.nome = nome;
-        this.saldo = saldo;
-        this.salario = salario;
-        this.propriedades = new ArrayList<>();
-        int presoPor = 0;
+        this.saldo = saldoInicial;
+        this.posicaoAtual = 0;
     }
 
-    public int getPresoPor() {
-        return presoPor;
+    public void adicionarPropriedade(Imovel imovel) {
+        propriedades.add(imovel);
+        imovel.proprietario = this;
     }
 
-    public void setPresoPor(int presoPor) {
-        this.presoPor = presoPor;
+    public void pagar(double valor) {
+        saldo -= valor;
+        System.out.println(nome + " pagou o valor de: R$" + valor + ". Saldo: R$" + saldo);
     }
 
-
-    public void addProprietario(Casa casa){
-        propriedades.add(casa);
+    public void receber(double valor) {
+        saldo += valor;
+        System.out.println(nome + " recebeu o valor de: R$" + valor + ". Saldo: R$" + saldo);
     }
 
-    public void removerProprietario(Casa casa){
-        propriedades.remove(casa);
+    public boolean estaFalido() {
+        return saldo < 0;
     }
 
     public String getNome() {
         return nome;
     }
 
+
     public double getSaldo() {
         return saldo;
-    }
-
-    public ArrayList<Casa> getPropriedades() {
-        return propriedades;
-    }
-
-    public Casa getPosicao() {
-        return posicao;
-    }
-
-    public double getSalario() {
-        return salario;
     }
 
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
 
-    public void setPosicao(Casa posicao) {
-        this.posicao = posicao;
+    public boolean estaNaPrisao() {
+        return rodadasNaPrisao > 0;
     }
+
+    public void reduzirRodadaPrisao() {
+        if (rodadasNaPrisao > 0) {
+            rodadasNaPrisao--;
+        }
+    }
+
 }
