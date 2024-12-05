@@ -24,9 +24,9 @@ Estilização: CSS puro
 
 Requisitos
 
-Node.js instalado (v16 ou superior recomendado)
+Node.js instalado
 
-Gerenciador de pacotes npm ou yarn
+Gerenciador de pacotes npm
 
 Como Executar o Projeto
 
@@ -34,16 +34,13 @@ Passo 1: Clonar o Repositório
 
 Clone o repositório do projeto para a sua máquina local:
 
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+git clone https://github.com/raupp30/Ulbra/tree/master/2024_2/Desenv.%20Orientado%20a%20Componentes/react/cod.5.AS.26.10
 
 Passo 2: Instalar Dependências
 
 Instale as dependências necessárias:
 
 npm install
-# ou
-yarn install
 
 Passo 3: Configurar o json-server
 
@@ -60,8 +57,6 @@ Passo 4: Iniciar o Projeto
 Inicie a aplicação React:
 
 npm start
-# ou
-yarn start
 
 A aplicação estará disponível em: http://localhost:3000.
 
