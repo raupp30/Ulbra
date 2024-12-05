@@ -84,5 +84,3 @@ Implementar autenticação de usuários.
 Adicionar paginação na lista de produtos.
 
 Melhorar a experiência do usuário com animações e feedback visual.
-
-Desenvolvido com ❤ por [Seu Nome].
