@@ -1,66 +1,85 @@
-<h1>Projeto CRUD de Produtos</h1>
+Projeto CRUD de Produtos
 
-    <p>Este projeto é uma aplicação web que permite realizar operações CRUD (Criar, Ler, Atualizar e Excluir) de produtos. Ele foi desenvolvido com o objetivo de prática em React, integrando uma API simulada usando o <code>json-server</code>.</p>
+Este projeto é uma aplicação web que permite realizar operações CRUD (Criar, Ler, Atualizar e Excluir) de produtos. Ele foi desenvolvido com o objetivo de prática em React, integrando uma API simulada usando o json-server.
 
-    <h2>Funcionalidades</h2>
-    <ul>
-        <li>Listar todos os produtos cadastrados.</li>
-        <li>Adicionar novos produtos com informações como nome, preço, descrição e URL da foto.</li>
-        <li>Editar os dados de produtos existentes.</li>
-        <li>Visualizar detalhes de um produto específico.</li>
-        <li>Excluir produtos.</li>
-    </ul>
+Funcionalidades
 
-    <h2>Tecnologias Utilizadas</h2>
-    <ul>
-        <li><strong>Front-end</strong>: React.js</li>
-        <li><strong>Back-end Simulado</strong>: json-server</li>
-        <li><strong>Estilização</strong>: CSS puro</li>
-    </ul>
+Listar todos os produtos cadastrados.
 
-    <h2>Requisitos</h2>
-    <ul>
-        <li>Node.js instalado </li>
-        <li>Gerenciador de pacotes npm ou yarn</li>
-    </ul>
+Adicionar novos produtos com informações como nome, preço, descrição e URL da foto.
 
-    <h2>Como Executar o Projeto</h2>
+Editar os dados de produtos existentes.
 
-    <h3>Passo 1: Clonar o Repositório</h3>
-    <pre><code>git clone https://github.com/raupp30/Ulbra/blob/master/2024_2/Desenv.%20Orientado%20a%20Componentes/react/cod.5.AS.26.10/README.md
+Visualizar detalhes de um produto específico.
 
-    <h3>Passo 2: Instalar Dependências</h3>
-    <pre><code>npm install
+Excluir produtos.
 
-    <h3>Passo 3: Configurar o json-server</h3>
-    <pre><code>npx json-server --watch db.json --port 3001</code></pre>
-    <ul>
-        <li>O arquivo <code>db.json</code> contém os dados iniciais da aplicação.</li>
-        <li>O servidor estará disponível em: <code>http://localhost:3001</code>.</li>
-    </ul>
+Tecnologias Utilizadas
 
-    <h3>Passo 4: Iniciar o Projeto</h3>
-    <pre><code>npm start
+Front-end: React.js
+
+Back-end Simulado: json-server
+
+Estilização: CSS puro
+
+Requisitos
+
+Node.js instalado
+
+Gerenciador de pacotes npm ou yarn
+
+Como Executar o Projeto
+
+Passo 1: Clonar o Repositório
+
+Clone o repositório do projeto para a sua máquina local:
+
+git clone https://github.com/raupp30/Ulbra/blob/master/2024_2/Desenv.%20Orientado%20a%20Componentes/react/cod.5.AS.26.10/README.md
+
+Passo 2: Instalar Dependências
+
+Instale as dependências necessárias:
+
+npm install
 # ou
-yarn start</code></pre>
-    <p>A aplicação estará disponível em: <code>http://localhost:3000</code>.</p>
+yarn install
 
-    <h2>Estrutura do Projeto</h2>
-    <ul>
-        <li><strong>/src</strong>: Contém todos os componentes React, páginas e estilos.</li>
-        <li><strong>db.json</strong>: Arquivo usado pelo <code>json-server</code> para simular uma API REST.</li>
-    </ul>
+Passo 3: Configurar o json-server
 
-    <h2>Comandos Principais</h2>
-    <ul>
-        <li><strong>Iniciar o servidor fake</strong>: <code>npx json-server --watch db.json --port 3001</code></li>
-        <li><strong>Iniciar o projeto React</strong>: <code>npm start</code> ou <code>yarn start</code></li>
-    </ul>
+Inicie o servidor fake com os dados iniciais:
 
-    <h2>Melhoria Futuras</h2>
-    <ul>
-        <li>Implementar autenticação de usuários.</li>
-        <li>Adicionar paginação na lista de produtos.</li>
-        <li>Melhorar a experiência do usuário com animações e feedback visual.</li>
-    </ul>
+npx json-server --watch db.json --port 3001
 
+O arquivo db.json contém os dados iniciais da aplicação.
+
+O servidor estará disponível em: http://localhost:3001.
+
+Passo 4: Iniciar o Projeto
+
+Inicie a aplicação React:
+
+npm start
+# ou
+yarn start
+
+A aplicação estará disponível em: http://localhost:3000.
+
+Estrutura do Projeto
+
+/src: Contém todos os componentes React, páginas e estilos.
+
+db.json: Arquivo usado pelo json-server para simular uma API REST.
+
+Comandos Principais
+
+Iniciar o servidor fake: npx json-server --watch db.json --port 3001
+
+Iniciar o projeto React: npm start ou yarn start
+
+Melhoria Futuras
+
+Implementar autenticação de usuários.
+
+Adicionar paginação na lista de produtos.
+
+Melhorar a experiência do usuário com animações e feedback visual.
