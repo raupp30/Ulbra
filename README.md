@@ -24,7 +24,7 @@ Estilização: CSS puro
 
 Requisitos
 
-Node.js instalado
+Node.js instalado (v16 ou superior recomendado)
 
 Gerenciador de pacotes npm ou yarn
 
@@ -34,7 +34,8 @@ Passo 1: Clonar o Repositório
 
 Clone o repositório do projeto para a sua máquina local:
 
-git clone https://github.com/raupp30/Ulbra/blob/master/2024_2/Desenv.%20Orientado%20a%20Componentes/react/cod.5.AS.26.10/README.md
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
 
 Passo 2: Instalar Dependências
 
@@ -83,3 +84,5 @@ Implementar autenticação de usuários.
 Adicionar paginação na lista de produtos.
 
 Melhorar a experiência do usuário com animações e feedback visual.
+
+Desenvolvido com ❤ por [Seu Nome].
