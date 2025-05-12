@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="tela-escura" >
+    <div class="container">
+        <h2>Crie uma conta</h2>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% for category, message in messages %}
+            <p class="flash {{ category }}">{{ message }}</p>
+          {% endfor %}
+        {% endwith %}
+
+        <img class="google" src="https://pngimg.com/d/google_PNG19644.png" alt="">
+
+        <form method="POST">
+            <label>Nome:</label><br>
+            <input type="text" name="nome" required><br><br>
+
+            <label>Email:</label><br>
+            <input type="email" name="email" required><br><br>
+
+            <label>Senha:</label><br>
+            <input type="password" name="senha" required><br><br>
+
+            <button type="submit">Registrar</button>
+
+            <p class="termos">Ao se registrar você estará concordando com nossos termos de serviço e nossa política de privacidade</p>
+        </form>
+
+        <p>Já tem conta? <a href="/login_paciente">Faça login</a></p>
+    </div>
+</body>
+</html>

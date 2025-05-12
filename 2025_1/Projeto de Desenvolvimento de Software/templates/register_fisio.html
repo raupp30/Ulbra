@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro Fisioterapeuta</title>
+</head>
+<body>
+    <h2>Registrar Fisioterapeuta</h2>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% for category, message in messages %}
+        <p style="color: {% if category == 'success' %}green{% else %}red{% endif %};">{{ message }}</p>
+      {% endfor %}
+    {% endwith %}
+
+    <form method="POST">
+        <label>Nome:</label><br>
+        <input type="text" name="nome" required><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="email" required><br><br>
+
+        <label>Senha:</label><br>
+        <input type="password" name="senha" required><br><br>
+
+        <button type="submit">Registrar</button>
+
+        <p>Ao se registrar você estará concordando com nossos termos de serviço e nossa politica de privacidade</p>
+    </form>
+
+    <p>Já tem conta? <a href="/login_fisio">Faça login</a></p>
+</body>
+</html>
